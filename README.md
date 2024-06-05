@@ -1,7 +1,7 @@
 # Título
 
 ## Tema
-###Dimensiones tema
+### Dimensiones tema
 
 ## Indicadores
 
