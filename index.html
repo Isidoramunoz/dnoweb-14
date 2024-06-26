@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panorama de los museos en Chile</title>
+    <!-- Agregar la fuente Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <!-- Estilos Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #212529;
+            font-family: "Montserrat", sans-serif; 
+        }
+        .dashboard-title {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: left; 
+            font-weight: 700; 
+            font-size: 2.5rem; 
+        }
+        .dashboard-description {
+            text-align: left; 
+            margin-bottom: 30px; 
+            font-size: 1.1rem; 
+        }
+        .card {
+            margin-bottom: 10px; /* Reducido de 20px a 10px */
+            border: none; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+        .card-header {
+            background-color: #000000; 
+            color: white; 
+            padding: 15px; 
+            font-size: 1.5rem; 
+            font-weight: bold; 
+            border-radius: 8px 8px 0 0; 
+        }
+        .card-subtitle {
+            font-size: 1.2rem;
+            font-weight: bold; 
+            color: #6c757d; 
+            margin-bottom: 10px; 
+            margin-top: 10px; 
+        }
+        .card-img {
+            margin-top: 20px; 
+        }
+        .card-img img {
+            max-width: 100%; 
+            height: auto;
+            border-radius: 8px; 
+            margin-bottom: 10px; 
+        }
+        .card-body {
+            padding: 20px; 
+        }
+        .second-img-text {
+            font-weight: bold;
+            text-align: center; 
+            margin-top: 10px; 
+        }
+       
+        .icon-museo,
+        .icon-sala,
+        .icon-publico-privado,
+        .icon-museo-publico-privado {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .icon-museo {
+            background-color: #5f4690;
+        }
+        .icon-sala {
+            background-color: #1d6996;
+        }
+        .icon-publico-privado {
+            background-color: #ffcc00; 
+        }
+        .icon-museo-publico-privado {
+            background-color: #5f4690; 
+        }
+       
+        .card-body .card-img img {
+            max-width: 100%;
+            height: auto;
+        }
+        .card-body .card-img {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .museos-publicos-privados {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #6c757d;
+        }
+        .museos-publicos-privados .icon-museo,
+        .museos-publicos-privados .icon-sala,
+        .museos-publicos-privados .icon-publico-privado,
+        .museos-publicos-privados .icon-museo-publico-privado {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h1 class="dashboard-title">Panorama de los museos en Chile</h1>
+                <p class="dashboard-description">
+                    Caracterización de los espacios museales del país, considerando aspectos geográficos, técnicos, organizativos y administrativos. Datos obtenidos de registromuseoschile.cl, actualizados al 21 de Junio de 2024. Los datos responden a un total de 443 espacios museales.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        Contexto geográfico y organizativo
+                    </div>
+                    <div class="card-body">
+                        <div class="card-subtitle mb-2">Distribución de museos por región</div>
+                        <div class="card-img">
+                            <img src="Datos/D1.I1.png" alt="Distribución de museos por región" />
+                        </div>
+                        <div class="card-subtitle mb-2">Museos por dependencia administrativa</div>
+                        <div class="card-img">
+                            <img src="Datos/D1.I2.png" alt="Museos por dependencia administrativa" />
+                        </div>
+                        <div class="card-subtitle mb-2">Redes de museo</div>
+                        <div class="card-img">
+                            <img src="Datos/D1.I3.png" alt="Redes de museo" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        Tipologías
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h2 class="card-subtitle mb-2">Tipos de espacios museales</h2>
+                                <div class="icon-museo"></div>
+                                <span style="color: #5f4690;">Museos</span>
+                                <br />
+                                <div class="icon-sala"></div>
+                                <span style="color: #1d6996;">Salas de exposición museográfica</span>
+                                <div class="card-img">
+                                    <img src="Datos/D2.I1.png" alt="Tipos de espacios museales" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h2 class="card-subtitle mb-2">Museos públicos y privados</h2>
+                                <div class="icon-museo-publico-privado"></div>
+                                <span style="color: #5f4690;">Públicos</span>
+                                <br />
+                                <div class="icon-sala"></div>
+                                <span style="color: #1d6996;">Privados</span>
+                                <div class="card-img">
+                                    <img src="Datos/D2.I2.png" alt="Museos públicos y privados" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <h2 class="card-subtitle mb-2">Museos por magnitud</h2>
+                                <div class="card-img">
+                                    <img src="Datos/D2.I3.png" alt="Museos por magnitud" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<div class="row mt-4">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        Colecciones e investigación
+                    </div>
+                    <div class="card-body">
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <div class="card-subtitle mb-2">Museos por tipo de colección</div>
+                                <img src="Datos/D3.I2.png" alt="Museos por tipo de colección" class="img-fluid" />
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-subtitle mb-2">Áreas en las que se realiza investigación</div>
+                                <img src="Datos/D3.I3.png" alt="Áreas en las que se realiza investigación" class="img-fluid" />
+                            </div>
+                             <div class="row">
+                            <div class="col-md-12">
+                                <div class="card-subtitle mb-2">Museos por magnitud de colecciones</div>
+                                <img src="Datos/D3.I1.png" alt="Museos por magnitud de colecciones" class="img-fluid" />
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <div class="row">
+        <!-- Columna izquierda -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    Experiencia y accesibilidad cultural
+                </div>
+                <div class="card-body">
+                    <div class="card-subtitle mb-2">Servicios que entregan los museos</div>
+                    <div class="card-img">
+                        <img src="Datos/D4.I1I2I3.png" alt="Servicios que entregan los museos" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+          <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    Financiamiento y recursos estratégicos
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card-subtitle mb-2">Museos por superficie construida</div>
+                            <img src="Datos/D5.I3.png" alt="Museos por superficie construida" class="img-fluid" />
+                        </div>
+                        <div class="col-md-12">
+                            <div class="card-subtitle mb-2">Fuentes de financiamiento</div>
+                            <img src="Datos/D5.I1.png" alt="Fuentes de financiamiento" class="img-fluid" />
+                        </div>
+                        <div class="col-md-12">
+                            <div class="card-subtitle mb-2">Museos por magnitud de trabajadores</div>
+                            <img src="Datos/D5.I2.png" alt="Museos por magnitud de trabajadores" class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-zoHp1+pZm3BA/xZI3ZS7AYn+1SvbT7U8Y4WhDInz2GtfNg6JlCzkuDCy7z8ym0J8" crossorigin="anonymous"></script>
+</body>
+</html>
